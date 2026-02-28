@@ -1,0 +1,40 @@
+---
+title: Insertion Sort
+description: Build sorted array by inserting elements into their correct position
+---
+
+| Stable? | Time     | Space  |
+| ------- | -------- | ------ |
+| Yes     | `O(n^2)` | `O(1)` |
+
+## Explanation
+
+Treat the left side as sorted and scan from the second element onward. For each element, compare it backward with the sorted part, shift larger elements right, then insert it into the gap. Repeat until the entire list is sorted.
+
+![insertion-sort](./insertion-sort.gif)
+
+<Info>
+- **Nearly Sorted Data**: If the list is nearly sorted, most items shift only a little, so it does fewer moves.
+- **Real-time Data**: When data is streamed in real time, each new item acts like the last iteration of the algorithm, which is just moving the item into its correct position among the already sorted items without re-sorting the entire list.
+</Info>
+
+## Implementation
+
+```js title="Insertion Sort"
+function insertionSort(arr) {
+  for (let i = 1; i < arr.length; i++) {
+    let j = i - 1;
+
+    while (j >= 0 && arr[j + 1] < arr[j]) {
+      [arr[j + 1], arr[j]] = [arr[j], arr[j + 1]];
+      j--;
+    }
+  }
+}
+
+const numbers = [6, 5, 3, 1, 8, 7, 2, 4];
+
+insertionSort(numbers);
+
+console.log(numbers); // [1, 2, 3, 4, 5, 6, 7, 8]
+```

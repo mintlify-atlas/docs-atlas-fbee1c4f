@@ -1,0 +1,92 @@
+---
+title: Understanding Git
+description: Learn about Git's three main areas and core commands for version control
+---
+
+## Git Areas
+
+Git has three main areas/stages where your files can exist:
+
+### 1. Working Directory (Unstaged Area) - 1️⃣
+
+This is where you create or edit files.
+
+The unstaged area can contain two types of files: untracked and modified.
+
+- **Untracked files** are new files that Git doesn't know about yet. They've never been part of the version control.
+- **Modified files** are tracked (known by version control) files with changes that haven't been recorded in version control yet.
+
+### 2. Staging Area - 2️⃣
+
+This is where you plan which changes will become part of version control, reviewing and grouping related updates before committing them.
+
+### 3. Repository (Committed Area) - 3️⃣
+
+This is where Git permanently stores your committed changes, with each commit representing a snapshot of your project at a specific point in time.
+
+## Core Commands
+
+### Checking Status
+
+- `git status`: Show working tree status.
+
+<Info>
+Shows current branch, staged changes, unstaged changes, and untracked files.
+</Info>
+
+### Staging Changes
+
+- `git add <file>...`: Add selected file changes to the staging area. 1️⃣ → 2️⃣
+
+  - `.` - To select all changes.
+
+### Committing Changes
+
+- `git commit`: Commit staged changes to the repository. 2️⃣ → 3️⃣
+
+<Note>
+Opens the default text editor to enter a multi-line commit message.
+</Note>
+
+- `-m "<message>"` - To provide a single-line commit message directly without opening the editor.
+  - Can be used multiple times for multi-line messages without opening the editor.
+- `--amend` - Modify the most recent commit.
+  - Opens the default text editor to change the commit message of the last commit. If you have items in the staging area, they will be added to the commit that is being amended.
+
+### Removing Files
+
+- `git rm <file>...`: Remove files from repository and add the removal to the staging area. 3️⃣ → ❌ → 2️⃣
+
+  - `--cached` - Unstage files (move them from the staging area back to unstaged). 2️⃣ → 1️⃣
+
+### Viewing History
+
+- `git log`: Show commit history.
+
+<Info>
+Shows a list of commits in reverse order including commit ID, author, date, and message.
+</Info>
+
+- `--oneline` - Show each commit on a single line (minimized view).
+- `-<number>` - Limit the number of commits shown.
+
+### Listing Files
+
+- `git ls-files`: Show all tracked files in the repository.
+
+### Comparing Changes
+
+- `git diff`: Compare working directory (1️⃣) with the staging area (2️⃣).
+
+<Info>
+It displays changes to files line by line, providing a clear view of what has been added, modified, or deleted.
+</Info>
+
+- `HEAD` - Compare the working directory (1️⃣) + staging area (2️⃣) with the last commit (3️⃣).
+- `--staged` - Compare staged (2️⃣) changes with the last commit (3️⃣).
+- `<commit_hash1> <commit_hash2>` - Compare two commits.
+- `<branch_a> <branch_b>` - Compare two branches.
+
+<Tip>
+You can view changes only within specific files by providing the file names after any of these options.
+</Tip>

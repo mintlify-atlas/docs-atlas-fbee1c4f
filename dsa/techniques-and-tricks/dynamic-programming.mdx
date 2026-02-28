@@ -1,0 +1,64 @@
+---
+title: Dynamic Programming
+description: Optimizing recursive solutions by caching results to avoid redundant calculations
+---
+
+## Overview
+
+Dynamic programming in DSA is a technique where you break a problem into smaller overlapping subproblems, solve each subproblem once, and reuse those results instead of recalculating them.
+
+## Two Main DP Styles
+
+**Top-down (memoization):**
+Solve the problem recursively and store the results of solved subproblems to avoid redundant calculations.
+
+**Bottom-up (tabulation):**
+Solve smaller subproblems first, store results in a table, and use them to build solutions to larger problems.
+
+## Examples
+
+### Fibonacci
+
+<CodeGroup>
+```js Top-down (Memoization)
+function fib(n, cache = new Map()) {
+  if (n <= 1) return n;
+
+  if (cache.has(n)) {
+    return cache.get(n);
+  }
+
+  const result = fib(n - 1, cache) + fib(n - 2, cache);
+  cache.set(n, result);
+
+  return result;
+}
+
+console.log(fib(6)); // 8
+console.log(fib(10)); // 55
+console.log(fib(999)); // 2.686381002448534e+208
+```
+
+```js Bottom-up (Tabulation)
+function fib(n) {
+  if (n <= 1) return n;
+
+  const cache = [0, 1];
+
+  for (let i = 2; i <= n; i++) {
+    cache[i] = cache[i - 1] + cache[i - 2];
+  }
+
+  return cache[n];
+}
+
+console.log(fib(6)); // 8
+console.log(fib(10)); // 55
+console.log(fib(999)); // 2.686381002448534e+208
+```
+</CodeGroup>
+
+<Note>
+- **Top-down** - Time: `O(n)`, Space: `O(n)`
+- **Bottom-up** - Time: `O(n)`, Space: `O(1)`
+</Note>

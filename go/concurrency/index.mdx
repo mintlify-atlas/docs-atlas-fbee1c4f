@@ -1,0 +1,47 @@
+---
+title: Concurrency in Go
+description: Master concurrent programming in Go with goroutines, channels, and synchronization patterns
+---
+
+Go provides powerful built-in support for concurrent programming through goroutines and channels. These primitives make it easy to write programs that efficiently handle multiple tasks simultaneously.
+
+## Core Concepts
+
+<CardGroup cols={2}>
+  <Card title="Goroutines" icon="bolt" href="/go/concurrency/goroutines">
+    Lightweight concurrent functions managed by the Go runtime
+  </Card>
+  <Card title="Channels" icon="arrows-left-right" href="/go/concurrency/channels">
+    Type-safe communication mechanism for sending data between goroutines
+  </Card>
+</CardGroup>
+
+## What You'll Learn
+
+<Steps>
+  <Step title="Understanding Goroutines">
+    Learn how to create and manage lightweight concurrent functions that run independently
+  </Step>
+  <Step title="Synchronization with WaitGroups">
+    Master waiting for multiple goroutines to complete using sync.WaitGroup
+  </Step>
+  <Step title="Channel Communication">
+    Understand how to safely pass data between goroutines using channels
+  </Step>
+  <Step title="Advanced Patterns">
+    Explore buffered channels, select statements, and the done channel pattern
+  </Step>
+</Steps>
+
+## Why Concurrency in Go?
+
+Go's concurrency model is designed to be simple yet powerful:
+
+- **Lightweight**: Goroutines consume minimal memory and are managed efficiently by the Go runtime
+- **Type-safe**: Channels provide compile-time type checking for inter-goroutine communication
+- **Built-in**: Concurrency primitives are part of the language, not external libraries
+- **Composable**: Easy to build complex concurrent systems from simple building blocks
+
+<Tip>
+Go's concurrency philosophy is captured in the saying: "Don't communicate by sharing memory; share memory by communicating."
+</Tip>

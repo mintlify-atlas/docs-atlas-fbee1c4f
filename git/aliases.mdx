@@ -1,0 +1,34 @@
+---
+title: Aliases
+description: Create custom shortcuts for frequently used Git commands
+---
+
+Git aliases are custom shortcuts you create to make Git commands quicker and easier to type.
+
+## Creating Aliases
+
+```sh
+git config --global alias.<alias> '<actual_command>'
+```
+
+### Example
+
+```sh
+git config --global alias.lo 'log --oneline'
+```
+
+## Removing Aliases
+
+```sh
+git config --global --unset alias.<alias>
+```
+
+## Listing Aliases
+
+```sh
+git config --global --list
+```
+
+<Info>
+Shows all global config entries including your aliases.
+</Info>
