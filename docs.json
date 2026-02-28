@@ -73,6 +73,7 @@
               "dsa/trees/binary-trees",
               "dsa/trees/binary-search-tree",
               "dsa/trees/binary-heaps",
+              "dsa/trees/trie",
               "dsa/trees/radix-tree",
               "dsa/graphs",
               "dsa/matrix"
