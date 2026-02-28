@@ -1,0 +1,150 @@
+{
+  "projectType": "general",
+  "projectName": "sh2a | Notes",
+  "projectDescription": "A curated collection of technical notes covering Git, Data Structures & Algorithms, and Go programming.",
+  "theme": "palm",
+  "primaryColor": "#3B82F6",
+  "lightColor": "#60A5FA",
+  "darkColor": "#2563EB",
+  "navigation": {
+    "tabs": [
+      {
+        "tab": "Git",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "git/index",
+              "git/configuration",
+              "git/understanding-git",
+              "git/branches"
+            ]
+          },
+          {
+            "group": "Advanced Topics",
+            "pages": [
+              "git/stashing",
+              "git/discarding-changes",
+              "git/rebasing",
+              "git/reflogs",
+              "git/remote-repository",
+              "git/aliases"
+            ]
+          },
+          {
+            "group": "Extra",
+            "pages": [
+              "git/worktrees"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "DSA",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "dsa/index",
+              "dsa/complexity"
+            ]
+          },
+          {
+            "group": "Data Structures",
+            "pages": [
+              "dsa/array",
+              "dsa/hash-table",
+              "dsa/linked-list",
+              "dsa/stack",
+              "dsa/queue",
+              "dsa/trees/index",
+              "dsa/trees/binary-trees",
+              "dsa/trees/binary-search-tree",
+              "dsa/trees/binary-heaps",
+              "dsa/trees/radix-tree",
+              "dsa/graphs",
+              "dsa/matrix"
+            ]
+          },
+          {
+            "group": "Algorithms",
+            "pages": [
+              "dsa/techniques-and-tricks/index",
+              "dsa/techniques-and-tricks/recursion",
+              "dsa/techniques-and-tricks/backtracking",
+              "dsa/techniques-and-tricks/dynamic-programming",
+              "dsa/techniques-and-tricks/gauss-sum",
+              "dsa/sorting/index",
+              "dsa/sorting/bubble-sort",
+              "dsa/sorting/selection-sort",
+              "dsa/sorting/insertion-sort",
+              "dsa/sorting/merge-sort",
+              "dsa/sorting/quick-sort",
+              "dsa/sorting/counting-sort",
+              "dsa/searching/index",
+              "dsa/searching/linear-search",
+              "dsa/searching/binary-search",
+              "dsa/searching/dfs",
+              "dsa/searching/bfs"
+            ]
+          }
+        ]
+      },
+      {
+        "tab": "Go",
+        "groups": [
+          {
+            "group": "Getting Started",
+            "pages": [
+              "go/index"
+            ]
+          },
+          {
+            "group": "Basics",
+            "pages": [
+              "go/basic-data-types",
+              "go/declaring-variables",
+              "go/type-casting",
+              "go/string-formatting",
+              "go/conditions",
+              "go/loops",
+              "go/functions"
+            ]
+          },
+          {
+            "group": "Advanced",
+            "pages": [
+              "go/composite-types",
+              "go/pointers",
+              "go/methods",
+              "go/interfaces",
+              "go/generics",
+              "go/concurrency/index",
+              "go/concurrency/goroutines",
+              "go/concurrency/channels"
+            ]
+          }
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Comprehensive Git version control documentation",
+    "Data structures and algorithms reference",
+    "Go programming language guide",
+    "Code examples with explanations",
+    "Organized by topic with logical progression"
+  ],
+  "publicApiSurface": [
+    "Git configuration and setup",
+    "Git branches and rebasing",
+    "Big O complexity analysis",
+    "Array, linked list, stack, queue data structures",
+    "Binary trees and graph algorithms",
+    "Sorting algorithms (bubble, merge, quick, etc.)",
+    "Searching algorithms (linear, binary, DFS, BFS)",
+    "Go basic and composite data types",
+    "Go functions, methods, and interfaces",
+    "Go concurrency with goroutines and channels"
+  ]
+}
